@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, viewport, and page title -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyle Agreda's Portfolio</title>
+
+    <!-- CSS Styles -->
+    <style>
+
+        /* Importing Google Fonts and setting global styles */
+        @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Global styles for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Styles for the body */
+        body {
+            color: #ededed;
+            background-color: #081b29;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+
+        /* Styles for the fixed header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        /* styling and positioning of the navigation bar links */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px; 
+            background-color: #081b29; 
+            z-index: 100;
+        }
+
+        /* Styles for the navigation bar links */
+        .navbar a {
+            font-size: 20px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #00abf0;
+        }
+
+        
+        /* Styles for the blog container */
+        .blog-container {
+            padding: 100px 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        /* Styles for odd-numbered blog entries */
+        .blog-entry:nth-child(odd) {
+            flex-basis: 45%; 
+            margin-right: 5%;
+        }
+
+        /* Styles for even-numbered blog entries */
+        .blog-entry:nth-child(even) {
+            flex-basis: 45%; 
+            margin-left: 5%;
+        }
+
+        /* Styles for each blog entry */
+        .blog-entry {
+            width: 300px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #152c3d;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Styles for blog entry images */
+        .blog-entry img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for image hover effect */
+        .blog-entry img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Styles for blog entry paragraphs */
+        .blog-entry p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Styles for the footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-family: cursive;
+            font-size: 15px;
+            margin-top: 10%;
+            background: rgba(255, 255, 255, 0.455);
+            color: #000000;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            position: relative;
+        }
+        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+        @media only screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 10px;
+            }
+
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                margin: 0 15px;
+            }
+
+            .blog-container {
+                padding: 50px 5%;
+            }
+
+            .blog-entry {
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .blog-entry img {
+                width: 100%;
+            }
+
+            .footer {
+                font-size: 12px;
+                margin-top: 5%;
+            }
+        }
+
+    </style>
+
+    <!-- External CSS for boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="file:///C:/New/index.html#" class="active">HOME</a>
+            <a href="file:///C:/New/IT111%20Blog%20Entries.html">IT111 BLOG ENTRIES</a>
+            <a href="file:///C:/New/Flex.html#">FLEX PAGE</a>
+        </nav>
+    </header>
+
+    <!-- Blog Entries Container -->
+    <div class="blog-container">
+
+        <!-- Blog Entry 1 -->
+        <div class="blog-entry">
+            <h3>LESSON 1</h3>
+            <img src="lesson1.jpg" alt="Lesson 1 Image">
+            <p> Introduction to Computing typically covers fundamental concepts in computer science and information technology. 
+                Us students learn about the basics of computer systems. This lesson may also introduce key topics like computer hardware, software, networking, and the impact of computing on society. 
+                Students often gain foundational skills in problem-solving and logical thinking, 
+                setting the groundwork for more advanced studies in computing.</p>
+        </div>
+
+        <!-- Blog Entry 2 -->
+        <div class="blog-entry">
+            <h3>LESSON 2</h3>
+            <img src="lesson2.jpg" alt="Lesson 2 Image">
+            <p> The Professions & careers in computing offers diverse opportunities, including roles such as software developer, network engineer, data scientist, 
+                cybersecurity analyst, systems analyst, database administrator, and IT project manager.</p>
+        </div>
+
+        <!-- Blog Entry 3 -->
+        <div class="blog-entry">
+            <h3>LESSON 3 & 4</h3>
+            <img src="lesson3.jpg" alt="Lesson 3 Image">
+            <p>The information processing cycle is a sequence of steps that computers follow to process data, including input, processing, output, 
+                and storage. Computer systems encompass hardware and software components that work together to perform tasks and execute the information processing cycle.</p>
+        </div>
+
+        <!-- Blog Entry 4 -->
+        <div class="blog-entry">
+            <h3>LESSON 5</h3>
+            <img src="lesson4.jpg" alt="Lesson 4 Image">
+            <p>The basic concept of computer security involves safeguarding computer systems and data from unauthorized access, damage, or theft, 
+                ensuring confidentiality, integrity, and availability of information.</p>
+        </div>
+    </div>
+
+    <div class="last" style="text-align: center;">
+        <h3 style="margin-bottom: 10px;">THIS IS THE MOST CHALLENGING LESSON I'VE ENCOUNTERED IN COMPUTING THE WEBPAGE MAKING</h3>
+        <img src="ss1_ss2.jpg" alt="SS1 & SS2 Image" style="display: block; margin: 0 auto; max-width: 100%; width: 700px; height: 600px; margin-bottom: 2%;">
+        <p style="margin-bottom: 13%;">This is the most challenging yet enjoyable topic because I like to be stressed.</p>
+    </div>
+    
+
+    <!-- Footer Section -->
+    <div class="footer">
+        LYLE AGREDA 2023
+    </div>
+
+</body>
+
+</html>

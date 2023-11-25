@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, viewport, and page title -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyle Agreda's Portfolio</title>
+
+    <!-- CSS Styles -->
+    <style>
+        /* Importing Google Fonts and setting global styles */
+        @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Global styles for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Styles for the body */
+        body {
+            color: #ededed;
+            background-color: #081b29;
+        }
+
+        /* Styles for the fixed header */
+        .header {
+            position: relative;
+            background: transparent;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            background: transparent;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            z-index: 100;
+        }
+
+        /* Styles for the navigation bar links */
+        .navbar a {
+            justify-content: center;
+            background: transparent;
+            font-size: 20px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        /* Styles for navigation bar links on hover and when active */
+        .navbar a:hover,
+        .navbar a.active {
+            color: #00abf0;
+            justify-content: center;
+        }
+
+        /* Styles for the home section */
+        .home {
+            height: 100vh;
+            background: url(bg.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        /* Styles for the content within the home section */
+        .home-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Styles for various headings and their animated backgrounds home contens and about me contens */
+        .home-content h1 {
+            position: relative;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .home-content h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #081b29;
+            animation: showRight 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .home-content h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 40px;
+            color: rgb(112, 112, 164);
+            position: relative;
+            margin-left: -5%;
+        }
+
+        .home-content h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #081b29;
+            animation: showRight 1s ease forwards;
+            animation-delay: 1.6s;
+        }
+
+        .home-content .about-me {
+            margin: 20px 0;
+        }
+
+        .home-content .about-me p {
+            position: relative;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .home-content .about-me p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #081b29;
+            animation: showRight 1s ease forwards;
+            animation-delay: 1.6s;
+        }
+
+        /* Styles for the social media icons */
+        .home-sci {
+            position: absolute;
+            bottom: 5%;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 35%;
+        }
+
+        .home-s::before::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #081b29;
+            animation: showRight 1s ease forwards;
+            animation-delay: 2.2s;
+            z-index: 2;
+        }
+
+        /* Styling for individual social media link */
+        .home-sci a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        /* Styles for social media links on hover */
+        .home-sci a:hover {
+            color: #081b29;
+        }
+
+        .home-sci a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #00abf0;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .home-sci a:hover::before {
+            width: 100%;
+        }
+
+        /* Keyframe animation to reveal elements from the right */
+        @keyframes showRight {
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes manipActiveHover {
+            100% {
+                pointer-events: auto;
+            }
+        }
+
+        /* Styles for the video section */
+        .video {
+            background: #081b29;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+            padding: 50px;
+            margin-bottom: -10%;
+            margin-top: -5%;
+        }
+
+        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+        @media only screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 10px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                margin-left: 15px;
+            }
+
+            .home {
+                padding: 10% 5%;
+            }
+
+            .home-content {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .home-content h1 {
+                font-size: 40px;
+            }
+
+            .home-content h2 {
+                font-size: 24px;
+                margin-left: 0;
+            }
+
+            .home-sci {
+                margin-left: 0;
+                width: 100%;
+                bottom: 2%;
+            }
+
+            .home-sci a {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+
+            .video {
+                padding: 20px;
+                margin-top: 5%;
+                margin-bottom: 0;
+            }
+
+            .video h2 {
+                font-size: 18px;
+            }
+
+            .footer {
+                font-size: 12px;
+                margin-top: 5%;
+            }
+        }
+
+        /* Styles for the footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-family: cursive;
+            font-size: 15px;
+            margin-top: 10%;
+            background: rgba(255, 255, 255, 0.455);
+            color: #000000;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+
+    <!-- Linking external stylesheet for boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Header and Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Navigation links -->
+            <a href="file:///C:/New/index.html#" class="active">HOME</a>
+            <a href="file:///C:/New/IT111%20Blog%20Entries.html">IT111 BLOG ENTRIES</a>
+            <a href="file:///C:/New/Flex.html#">FLEX PAGE</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-content">
+            <!-- Headings and content about the user -->
+            <h1>IT111 <br> MAJOR OUTPUT <br> PRESENTATION </h1>
+
+            <div class="about-me">
+                <h2>ABOUT ME</h2>
+                <p>I am Lord Lyle Kimpert Agreda, 18 years old, a student at Bukidnon State University.
+                    I am currently residing in barangay Dalwangan, Malaybalay City. My hobbies include playing basketball,
+                    playing video games, working out, studying, and discovering new things.</p>
+            </div>
+
+        </div>
+
+        <!-- Social Media links-->
+        <div class="home-sci">
+            <a href="https://www.facebook.com/lyle.biasalah"><i class='bx bxl-facebook'></i></a>
+            <a href="https://instagram.com/pootchiii"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/_lyyyyle"><i class='bx bxl-twitter'></i></a>
+        </div>
+
+    </section>
+
+    <!-- Video for what I would be in next 8 years-->
+    <div class="video" style="text-align: center;">
+        <h2 style="color: #ffffff;">"WHAT I WOULD BE 8 YEARS FROM NOW"</h2>
+        <video src="8 years.mp4" autoplay controls style="width: 90%; max-width: 600px;"></video>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        LYLE AGREDA 2023
+    </div>
+
+</body>
+
+</html>
